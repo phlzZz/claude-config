@@ -36,7 +36,7 @@ This skill uses two subagents to split planning from execution, since the two ph
 | 1–3: Gather inputs, verify toolchain, pre-flight conflict checks | `project-planner` | Opus | Careful judgment on naming, conflict resolution, decisions that affect the whole run |
 | 4: Execute the bootstrap commands | `project-executor` | Sonnet | Fast, deterministic command execution and output verification |
 
-The subagents must be installed at the user agents directory — `~/.claude/agents/` on macOS, `%USERPROFILE%\.claude\agents\` on Windows. Phil keeps the canonical copies in Google Drive (`My Drive/Claude/agents/`) and symlinks the agents directory to it so both machines share one source of truth. If either subagent is missing, fall back to running everything in the main session and tell the user the subagents aren't installed.
+The subagents must be installed at the user agents directory — `~/.claude/agents/` on macOS, `%USERPROFILE%\.claude\agents\` on Windows. Phil keeps the canonical copies in the phlzzz/claude-config GitHub repo (cloned to C:\Claude\claude-config on Windows / ~/code/claude-config on macOS), with ~/.claude/agents/ symlinked into the repo so both machines and remote web sessions share one source of truth (web sessions get them via the session-start hook). If either subagent is missing, fall back to running everything in the main session and tell the user the subagents aren't installed.
 
 ## Workflow
 
@@ -87,7 +87,7 @@ Summarize for the user in one short paragraph: project name, local path, GitHub 
 
 If the `project-planner` or `project-executor` subagent is missing from the user agents directory, run the full workflow in the main session using the inline reference below, and tell the user once at the end:
 
-> "Heads up — the project-planner and project-executor subagents aren't installed, so I ran everything in the main session. To get the Opus-for-planning / Sonnet-for-execution split, symlink your agents directory to the Drive copies (macOS: `ln -s "<Drive>/Claude/agents" ~/.claude/agents`; Windows: `mklink /D "%USERPROFILE%\.claude\agents" "<Drive>\Claude\agents"`)."
+> "Heads up — the project-planner and project-executor subagents aren't installed, so I ran everything in the main session. To get the Opus-for-planning / Sonnet-for-execution split, clone phlzzz/claude-config and symlink ~/.claude/agents into it (macOS: ln -s ~/code/claude-config/agents ~/.claude/agents; Windows PowerShell: New-Item -ItemType SymbolicLink -Path $HOME\.claude\agents -Target C:\Claude\claude-config\agents)."
 
 ### Inline fallback workflow
 
