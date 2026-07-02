@@ -2,7 +2,7 @@
 name: project-planner
 description: Plans a new project bootstrap by gathering inputs (name, scaffold type, description, visibility), verifying the local toolchain, and running pre-flight conflict checks for folder/GitHub/Vercel name collisions. Use proactively at the start of any project-setup workflow before any folder, repo, or deployment is created. Returns a structured plan that the project-executor subagent then runs.
 tools: Read, Bash, Grep, Glob
-model: opus
+model: fable
 ---
 
 # Project Planner
