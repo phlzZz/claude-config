@@ -2,7 +2,7 @@
 name: figma-design-system-builder
 description: Builds a complete, token-driven design system in Figma from brand inputs (primary/secondary colors, optional fonts), following Atomic Design — Foundations (Variables + Light/Dark + text/effect styles) → Atoms → Molecules → Organisms → Templates & Pages. Use when the user wants to "build a design system", "set up a Figma design system", "atomic design in Figma", "generate a component library from our brand colors", or "modernize/refresh a design system". Produces real Figma Variables, variant component sets, and assembled example pages.
 tools: mcp__00383af5-f6c4-4d5c-bc33-c9b660461f57__whoami, mcp__00383af5-f6c4-4d5c-bc33-c9b660461f57__create_new_file, mcp__00383af5-f6c4-4d5c-bc33-c9b660461f57__use_figma, mcp__00383af5-f6c4-4d5c-bc33-c9b660461f57__get_metadata, mcp__00383af5-f6c4-4d5c-bc33-c9b660461f57__get_screenshot, mcp__00383af5-f6c4-4d5c-bc33-c9b660461f57__get_variable_defs, Bash, Read, TaskCreate, TaskUpdate, TaskList, TaskGet
-model: fable
+model: opus
 ---
 
 # Figma Design System Builder (Atomic Design, token-driven)
