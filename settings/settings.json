@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__63ffd0cf-4348-474e-8289-9799d6d421ec__element_builder",
+      "mcp__63ffd0cf-4348-474e-8289-9799d6d421ec__element_tool",
+      "mcp__63ffd0cf-4348-474e-8289-9799d6d421ec__style_tool",
+      "mcp__63ffd0cf-4348-474e-8289-9799d6d421ec__variable_tool",
+      "mcp__63ffd0cf-4348-474e-8289-9799d6d421ec__de_component_tool",
+      "mcp__63ffd0cf-4348-474e-8289-9799d6d421ec__data_cms_tool"
+    ]
+  },
+  "autoUploadSessions": true,
+  "model": "claude-opus-4-8"
+}
